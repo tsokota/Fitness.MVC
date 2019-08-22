@@ -1,0 +1,24 @@
+﻿@model List<Fitness.DataObjects.Data.ChargeExtended>
+
+<h2>Index</h2>
+
+@if(Model != null)
+{
+    <table>
+        <tr>
+            <th>Group Name</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Summ</th>
+        </tr>
+        @foreach(var charge in Model)
+        {
+        <tr>
+            <td>@charge.GroupName</td>
+            <td>@charge.Name</td>
+            <td>@charge.Date</td>
+            <td>@charge.Summ</td>
+        </tr>
+        }
+    </table>
+}
