@@ -46,16 +46,16 @@ namespace Fitness.Web.Controllers
         // GET: AbonementIncome/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(_abonementIncomeService.GetItem(id));
         }
 
         // POST: AbonementIncome/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, AbonementIncome elem)
         {
             try
             {
-                // TODO: Add update logic here
+                _abonementIncomeService.Edit(id, elem);
 
                 return RedirectToAction("Index");
             }
@@ -68,16 +68,16 @@ namespace Fitness.Web.Controllers
         // GET: AbonementIncome/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(_abonementIncomeService.GetItem(id));
         }
 
         // POST: AbonementIncome/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(AbonementIncome elem)
         {
             try
             {
-                // TODO: Add delete logic here
+                _abonementIncomeService.Delete(elem.Id);
 
                 return RedirectToAction("Index");
             }

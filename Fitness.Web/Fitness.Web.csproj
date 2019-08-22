@@ -191,6 +191,8 @@
     <Content Include="Views\Charges\Index.cshtml" />
     <Content Include="Views\AbonementIncome\Index.cshtml" />
     <Content Include="Views\AbonementIncome\Create.cshtml" />
+    <Content Include="Views\AbonementIncome\Delete.cshtml" />
+    <Content Include="Views\AbonementIncome\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
