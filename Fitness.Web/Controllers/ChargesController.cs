@@ -24,5 +24,62 @@ namespace Fitness.Web.Controllers
 
             return View(result);
         }
+
+        // GET: Charge/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Charge/Create
+        [HttpPost]
+        public ActionResult Create(Charge elem)
+        {
+
+            _chargeService.Create(elem);
+
+            return RedirectToAction("Index");
+
+
+        }
+
+        // GET: Charge/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View(_chargeService.GetItem(id));
+        }
+
+        // POST: Charge/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, Charge elem)
+        {
+
+            _chargeService.Edit(id, elem);
+
+            return RedirectToAction("Index");
+
+        }
+
+        // GET: Charge/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View(_chargeService.GetItem(id));
+        }
+
+        // POST: Charge/Delete/5
+        [HttpPost]
+        public ActionResult Delete(Charge elem)
+        {
+            try
+            {
+                _chargeService.Delete(elem.Id);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

@@ -98,10 +98,12 @@ namespace Fitness.AdoNet.Repositories
         [Obsolete]
         public void EditItem(int id, AbonementIncome elem)
         {
-            string sql = "INSERT INTO AbonementIncome([Date], Summ) VALUES (@Date, @Summ)";
+            string sql = "UPDATE AbonementIncome SET Summ = @Summ, Date = @Date " +
+                         "where Id = " + id;
             SqlCommand cmd = new SqlCommand(sql);
             cmd.Parameters.Add("@Date", elem.Date.ToString("yyyy-MM-dd"));
             cmd.Parameters.Add("@Summ", elem.Summ);
+
             _connRepos.Execute(cmd);
         }
 

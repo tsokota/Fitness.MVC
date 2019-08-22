@@ -188,11 +188,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Charges\Index.cshtml" />
     <Content Include="Views\AbonementIncome\Index.cshtml" />
     <Content Include="Views\AbonementIncome\Create.cshtml" />
     <Content Include="Views\AbonementIncome\Delete.cshtml" />
     <Content Include="Views\AbonementIncome\Edit.cshtml" />
+    <Content Include="Views\Charges\Create.cshtml" />
+    <Content Include="Views\Charges\Edit.cshtml" />
+    <Content Include="Views\Charges\Delete.cshtml" />
+    <Content Include="Views\Charges\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

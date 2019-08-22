@@ -43,7 +43,7 @@ namespace Fitness.Business.Services
 
         public void Edit(int id, AbonementIncome elem)
         {
-            _abonementIncomeRepository.EditItem(elem);
+            _abonementIncomeRepository.EditItem(id, elem);
         }
 
         public void Delete(int id)

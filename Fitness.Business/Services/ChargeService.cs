@@ -12,6 +12,10 @@ namespace Fitness.Business.Services
     public interface IChargeService
     {
         List<ChargeExtended> GetList();
+        ChargeExtended GetItem(int id);
+        void Create(Charge elem);
+        void Edit(int id, Charge elem);
+        void Delete(int id);
     }
 
     public class ChargeService : IChargeService
@@ -26,6 +30,26 @@ namespace Fitness.Business.Services
         public List<ChargeExtended> GetList()
         {
             return _chargeRepository.GetList();
+        }
+
+        public ChargeExtended GetItem(int id)
+        {
+            return _chargeRepository.GetItemById(id);
+        }
+
+        public void Create(Charge elem)
+        {
+            _chargeRepository.AddItem(elem);
+        }
+
+        public void Edit(int id, Charge elem)
+        {
+            _chargeRepository.EditItem(id, elem);
+        }
+
+        public void Delete(int id)
+        {
+            _chargeRepository.DeleteItem(id);
         }
     }
 }

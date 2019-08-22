@@ -53,16 +53,11 @@ namespace Fitness.Web.Controllers
         [HttpPost]
         public ActionResult Edit(int id, AbonementIncome elem)
         {
-            try
-            {
+           
                 _abonementIncomeService.Edit(id, elem);
 
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+       
         }
 
         // GET: AbonementIncome/Delete/5
